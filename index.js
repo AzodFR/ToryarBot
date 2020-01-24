@@ -7,11 +7,10 @@ bot.on('ready', function(){
 })
 
 bot.on('message', function(message){
-   if (message.channel.id === "614477179853733918"){
-     if (message.isMemberMentioned(351333156403675137)){
+     if (message.isMemberMentioned(user.id === "351333156403675137")){
         message.channel.send("Tiens ton serveur !")
      }
- }
+
 
 
 
