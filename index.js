@@ -10,6 +10,7 @@ bot.on('message', function(message){
      if (message.content === "/toryar"){
         message.delete()
         message.channel.send("Tiens ton serveur ! <@351333156403675137>")
+         console.log(message.author.username);
      }
  
 
