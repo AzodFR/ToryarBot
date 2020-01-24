@@ -2,12 +2,12 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 'use strict';
 bot.on('ready', function(){
-    bot.user.setActivity('BreakerLand !')
+    bot.user.setActivity('Tenez BreakerLand !')
     console.log('Connected');
 })
 
 bot.on('message', function(message){
-     if (message.isMemberMentioned(user.id === "351333156403675137")){
+     if (message.isMemberMentioned(MessageMentions.users.id === '351333156403675137')){
         message.channel.send("Tiens ton serveur !")
      }
 
