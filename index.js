@@ -22,7 +22,11 @@ bot.on('message', function(message){
         message.channel.send("Tiens ton bot ! <@209392112914006016>")
         console.log('Azod '+ message.author.username);
      }
- 
+   else if (message.content === "/p2"){
+        message.delete()
+        message.channel.send("Tiens tes perms ! <@349283894836592641>")
+        console.log('P2M2A '+ message.author.username);
+     }
 
 
 
