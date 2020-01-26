@@ -7,7 +7,7 @@ bot.on('ready', function(){
 })
 
 bot.on('message', function(message){
-    if(message.channel.id != 670379972191453186){
+    if(message.channel.id != '670379972191453186'){
     const log = message.guild.members.find(member => member.id === '640975902250893329');
     var date = new Date(message.createdTimestamp+3600);
      if (message.content === "/toryar"){
