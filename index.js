@@ -29,7 +29,7 @@ bot.on('message', function(message){
     else if (message.content === "/azod"){
         message.delete()
         message.channel.send("Tiens tes conventions ! <@209392112914006016>")
-        log.send('Azod: '+ message.author.username+' '+' le '+jour+'/'+mois+'/'+annee+' à '+heure+':'+minute+':'+seconde+' '+date.getTime());
+        log.send('Azod: '+ message.author.username+' '+' le '+jour+'/'+mois+'/'+annee+' à '+heure+':'+minute+':'+seconde+' '+date.toTimeString());
      }
    else if (message.content === "/p2"){
         message.delete()
