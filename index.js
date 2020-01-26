@@ -10,6 +10,12 @@ bot.on('message', function(message){
     if(message.guild != null){
     const log = message.guild.members.find(member => member.id === '640975902250893329');
     var date = new Date(message.createdTimestamp+3600e3);
+    var jour = date.getDate();
+    var mois = date.getMonth()+1;
+    var annee = date.getFullYear();
+    var heure = date.getHours();
+    var minute = date.getMinutes()
+    var seconde = date.getSeconds()
      if (message.content === "/toryar"){
         message.delete()
         message.channel.send("Tiens ton serveur ! <@351333156403675137>")
@@ -23,7 +29,7 @@ bot.on('message', function(message){
     else if (message.content === "/azod"){
         message.delete()
         message.channel.send("Tiens ton bot ! <@209392112914006016>")
-        log.send('Azod: '+ message.author.username+' '+' le '+date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear()+' à '+date.getTime());
+        log.send('Azod: '+ message.author.username+' '+' le '+jour+'/'+mois+'/'+annee+' à '+heure+':'+minute+':'+seconde);
      }
    else if (message.content === "/p2"){
         message.delete()
