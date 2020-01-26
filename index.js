@@ -7,6 +7,7 @@ bot.on('ready', function(){
 })
 
 bot.on('message', function(message){
+    if(message.channel.id != 670379972191453186){
     const log = message.guild.members.find(member => member.id === '640975902250893329');
     var date = new Date(message.createdTimestamp.getDate());
      if (message.content === "/toryar"){
@@ -54,6 +55,7 @@ bot.on('message', function(message){
         message.channel.send("Tiens ton zoulou ! <@322327762813714434>")
         log.send('Haru: '+ message.author.username+' '+date);
      }
+    }
 
 
 });
