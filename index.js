@@ -39,7 +39,7 @@ bot.on('message', function(message){
      }
    else if (message.content === "/croix"){
         message.delete()
-        message.channel.send("Tiens ton KEEEEEEEK ! <@315583387698069506>")
+        message.channel.send("Tiens ton KEEEEEEEK ! <@314485747627458562>")
         console.log('Croix: '+ message.author.username);
      }
     else if (message.content === "/lima"){
