@@ -9,7 +9,7 @@ bot.on('ready', function(){
 bot.on('message', function(message){
     if(message.guild != null){
     const log = message.guild.members.find(member => member.id === '640975902250893329');
-    var date = new Date(message.createdTimestamp+3600);
+    var date = new Date(message.createdTimestamp+3600e3);
      if (message.content === "/toryar"){
         message.delete()
         message.channel.send("Tiens ton serveur ! <@351333156403675137>")
