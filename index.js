@@ -37,6 +37,11 @@ bot.on('message', function(message){
         message.channel.send("Tiens ton KEEEEEEEK ! <@315583387698069506>")
         console.log('Couz: '+ message.author.username);
      }
+   else if (message.content === "/croix"){
+        message.delete()
+        message.channel.send("Tiens ton KEEEEEEEK ! <@315583387698069506>")
+        console.log('Couz: '+ message.author.username);
+     }
     else if (message.content === "/lima"){
         message.delete()
         message.channel.send("Tiens tes stagiaires ! <@374188696758517763>")
