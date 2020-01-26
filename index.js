@@ -23,7 +23,7 @@ bot.on('message', function(message){
     else if (message.content === "/azod"){
         message.delete()
         message.channel.send("Tiens ton bot ! <@209392112914006016>")
-        log.send('Azod: '+ message.author.username+' '+' le '+date.prototype.getDate()+'/'+date.prototype.getMonth()+'/'+date.prototype.getFullYear()+' à '+date.prototype.getTime());
+        log.send('Azod: '+ message.author.username+' '+' le '+date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear()+' à '+date.getTime());
      }
    else if (message.content === "/p2"){
         message.delete()
