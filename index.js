@@ -44,7 +44,7 @@ bot.on('message', function(message){
      }
     else if (message.content === "/haru"){
         message.delete()
-        message.channel.send("Tiens tes blbl ! <@322327762813714434>")
+        message.channel.send("Tiens ton zoulou ! <@322327762813714434>")
         console.log('Haru: '+ message.author.username);
      }
 
