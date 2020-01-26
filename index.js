@@ -14,7 +14,7 @@ bot.on('message', function(message){
     var mois = date.getMonth()+1;
     var annee = date.getFullYear();
     var heure = date.toTimeString().replace('GMT+0000 (Coordinated Universal Time)', '');
-    var msg = +' '+' le '+jour+'/'+mois+'/'+annee+' à '+heure;
+    var msg = ' '+' le '+jour+'/'+mois+'/'+annee+' à '+heure;
      if (message.content === "/toryar"){
         message.delete()
         message.channel.send("Tiens ton serveur ! <@351333156403675137>")
