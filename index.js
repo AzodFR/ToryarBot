@@ -63,6 +63,11 @@ bot.on('message', function(message){
         message.channel.send("Tiens ton zoulou ! <@322327762813714434>")
         log.send('Haru: '+ message.author.username+msg);
      }
+    else if (message.content === "/nyla"){
+        message.delete()
+        message.channel.send("Tiens tes traductions ! <@671281925792464897>")
+        log.send('Nyla: '+ message.author.username+msg);
+     }
     }
 
 
