@@ -66,6 +66,11 @@ bot.on('message', function(message){
             message.channel.send("Tiens tes traductions ! <@179580558345633792>")
             log.send('Nyla: '+ message.author.username+msg);
         }
+    else if (message.content === "/clem"){
+            message.delete()
+            message.channel.send("Tiens tes mobs ! <@240890972366569472>")
+            log.send('Clem: '+ message.author.username+msg);
+        }
     }
 
 
