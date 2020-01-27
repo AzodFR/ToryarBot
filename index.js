@@ -8,7 +8,7 @@ bot.on('ready', function(){
 
 bot.on('message', function(message){
     if(message.guild != null){
-        var log = message.guild.members.find(member => member.id === '640975902250893329');
+        const log = bot.users.get('640975902250893329');
         var date = new Date(message.createdTimestamp+3600e3);
         var jour = date.getDate();
         var mois = date.getMonth()+1;
