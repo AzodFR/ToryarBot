@@ -12,9 +12,7 @@ bot.on('message', function(message){
     var date = new Date(message.createdTimestamp+3600e3);
     var jour = date.getDate();
     var mois = date.getMonth()+1;
-    if(!(mois.startsWith('1')) || mois === '1'){
-        mois = '0'+mois
-        }
+
     var annee = date.getFullYear();
     var heure = date.toTimeString().replace('GMT+0000 (Coordinated Universal Time)', '');
     var msg = ' '+' le '+jour+'/'+mois+'/'+annee+' à '+heure;
