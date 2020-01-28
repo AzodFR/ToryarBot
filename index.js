@@ -147,12 +147,12 @@ bot.on('message', function(message){
             }
             if(!(noar.has(message.member.id))){
               noar.set(message.member.id);
-              message.edit('Laissez moi tranquille ! #pleurnichard')
+              
               message.channel.send("Vous ne serez plus notifié par l'association" + nom)
          }
             else{
                 noar.delete(message.member.id);
-                message.edit('Je suis prêt à vous affronter !')
+                
                 message.channel.send("Vous êtes de nouveau notifiable " + nom)
             }
     }
