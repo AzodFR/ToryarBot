@@ -141,11 +141,11 @@ bot.on('message', function(message){
     else if (message.content === "/notif")
             if(!(noar.has(message.member.id))){
               noar.set(message.member.id);
-              message.channem.send("Vous ne serez plus notifié " + message.member.nickname)
+              message.channel.send("Vous ne serez plus notifié " + message.member.nickname)
          }
             else{
                 noar.delete(message.member.id);
-                message.channem.send("Vous êtes de nouveau notifiable " + message.member.nickname)
+                message.channel.send("Vous êtes de nouveau notifiable " + message.member.nickname)
             }
     }
 
