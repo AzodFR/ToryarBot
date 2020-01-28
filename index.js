@@ -22,7 +22,7 @@ bot.on('message', function(message){
                 var tag = "Toryar"
             }
             else{
-                var tag = "<@351333156403675137>
+                var tag = "<@351333156403675137>"
             }
             message.delete()
             message.channel.send("Tiens ton serveur ! "+tag)
@@ -33,7 +33,7 @@ bot.on('message', function(message){
                 var tag = "Coco"
             }
             else{
-                var tag = "<@192635336462041089>
+                var tag = "<@192635336462041089>"
             }
             message.delete()
             message.channel.send("Tiens ton tps ! "+tag)
@@ -44,7 +44,7 @@ bot.on('message', function(message){
                 var tag = "Azod"
             }
             else{
-                var tag = "<@209392112914006016>
+                var tag = "<@209392112914006016>"
             }
             message.delete()
             message.channel.send("Tiens tes conventions ! "+tag)
@@ -55,7 +55,7 @@ bot.on('message', function(message){
                 var tag = "Pierre-Marie"
             }
             else{
-                var tag = "<@349283894836592641>
+                var tag = "<@349283894836592641>"
             }
             message.delete()
             message.channel.send("Tiens tes perms ! "+tag)
@@ -66,7 +66,7 @@ bot.on('message', function(message){
                 var tag = "AlexSex"
             }
             else{
-                var tag = "<@196589708820742144>
+                var tag = "<@196589708820742144>"
             }
             message.delete()
             message.channel.send("Tiens ton grade Fondateur ! "+tag)
@@ -77,7 +77,7 @@ bot.on('message', function(message){
                 var tag = "Couz"
             }
             else{
-                var tag = "<@315583387698069506>
+                var tag = "<@315583387698069506>"
             }
             message.delete()
             message.channel.send("Tiens ton KEEEEEEEK ! "+tag)
@@ -88,7 +88,7 @@ bot.on('message', function(message){
                 var tag = "Croix"
             }
             else{
-                var tag = "<@314485747627458562>
+                var tag = "<@314485747627458562>"
             }
             message.delete()
             message.channel.send("Tiens ton KEEEEEEEK ! "+tag)
@@ -99,7 +99,7 @@ bot.on('message', function(message){
                 var tag = "Limastouille"
             }
             else{
-                var tag = "<@374188696758517763>
+                var tag = "<@374188696758517763>"
             }
             message.delete()
             message.channel.send("Tiens tes stagiaires ! "+tag)
@@ -110,7 +110,7 @@ bot.on('message', function(message){
                 var tag = "Haru"
             }
             else{
-                var tag = "<@322327762813714434>
+                var tag = "<@322327762813714434>"
             }
             message.delete()
             message.channel.send("Tiens ton zoulou ! "+tag)
@@ -121,7 +121,7 @@ bot.on('message', function(message){
                 var tag = "Nyla"
             }
             else{
-                var tag = "<@179580558345633792>
+                var tag = "<@179580558345633792>"
             }
             message.delete()
             message.channel.send("Tiens tes traductions ! "+tag)
@@ -132,7 +132,7 @@ bot.on('message', function(message){
                 var tag = "Clem"
             }
             else{
-                var tag = "<@240890972366569472>
+                var tag = "<@240890972366569472>"
             }
             message.delete()
             message.channel.send("Tiens tes mobs ! "+tag)
