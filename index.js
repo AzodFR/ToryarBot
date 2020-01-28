@@ -138,8 +138,8 @@ bot.on('message', function(message){
             message.channel.send("Tiens tes mobs ! "+tag)
             log.send('Clem: '+ message.author.username+msg);
         }
-    else if (message.content === "/notif")
-        if(message.member.id === null){
+    else if (message.content === "/notif"){
+        if(message.member.nickname === null){
             var nom = message.member.user.username
             }
         else{
@@ -147,12 +147,12 @@ bot.on('message', function(message){
             }
             if(!(noar.has(message.member.id))){
               noar.set(message.member.id);
-              
+              message.delete()
               message.channel.send("Vous ne serez plus notifié par l'association" + nom)
          }
             else{
                 noar.delete(message.member.id);
-                
+                message.delete()
                 message.channel.send("Vous êtes de nouveau notifiable " + nom)
             }
     }
