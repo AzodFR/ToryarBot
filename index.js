@@ -142,12 +142,12 @@ bot.on('message', function(message){
             if(!(noar.has(message.member.id))){
               noar.set(message.member.id);
               message.delete()
-              message.channel.send("Vous ne serez plus notifié par l'association " + message.member.user.username)
+              message.channel.send("Vous ne serez plus notifié par l'association <@" + message.member.id+">")
          }
             else{
                 noar.delete(message.member.id);
                 message.delete()
-                message.channel.send("Vous êtes de nouveau notifiable " + message.member.user.username)
+                message.channel.send("Vous êtes de nouveau notifiable <@" + message.member.id+">")
             }
     }
 
