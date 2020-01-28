@@ -139,7 +139,7 @@ bot.on('message', function(message){
             log.send('Clem: '+ message.author.username+msg);
         }
     else if (message.content === "/notif")
-            if(!(noar.has(message.member.id)){
+            if(!(noar.has(message.member.id))){
               noar.set(message.member.id);
               message.channem.send("Vous ne serez plus notifié " + message.member.nickname)
          }
