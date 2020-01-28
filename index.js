@@ -139,13 +139,21 @@ bot.on('message', function(message){
             log.send('Clem: '+ message.author.username+msg);
         }
     else if (message.content === "/notif")
+        if(message.member.id === null){
+            var nom = message.member.user.username
+            }
+        else{
+            var nom = message.member.nickname
+            }
             if(!(noar.has(message.member.id))){
               noar.set(message.member.id);
-              message.channel.send("Vous ne serez plus notifié " + message.member.nickname)
+              message.edit('Laissez moi tranquille ! #pleurnichard')
+              message.channel.send("Vous ne serez plus notifié par l'association" + nom)
          }
             else{
                 noar.delete(message.member.id);
-                message.channel.send("Vous êtes de nouveau notifiable " + message.member.nickname)
+                message.edit('Je suis prêt à vous affronter !')
+                message.channel.send("Vous êtes de nouveau notifiable " + nom)
             }
     }
 
