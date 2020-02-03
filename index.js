@@ -196,6 +196,6 @@ bot.on('message', function(message){
             .then(deleted => message.channel.send(` \`${deleted.size}\`messages supprimés.`))
             .catch(err => message.reply(`Oops... ${err}`));
     }
-}
+)}
 
 bot.login(process.env.BOT_TOKEN)
