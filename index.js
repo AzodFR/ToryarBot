@@ -160,12 +160,11 @@ bot.on('message', function(message){
 
 
 });
-module.exports = {
-    name: "clear",
-    aliases: ["purge", "nuke"],
-    category: "moderation",
-    description: "Clears the chat",
-    run: async (client, message, args) => {
+bot.on('message', function(message){
+    msg = message.content
+  if(msg.startsWith("/clear")){
+      const args = message.content.split(' ').slice(1);
+      const amount = args.join(' ');
         if (message.deletable) {
             message.delete();
         }
@@ -176,7 +175,7 @@ module.exports = {
         }
 
         // Check if args[0] is a number
-        if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
+        if (isNaN(amount) || parseInt(amount]) <= 0) {
             return message.reply("Met un nombre > 0 et pas de lettres").then(m => m.delete(5000));
         }
 
@@ -187,10 +186,10 @@ module.exports = {
 
         let deleteAmount;
 
-        if (parseInt(args[0]) > 100) {
+        if (parseInt(amount) > 100) {
             deleteAmount = 100;
         } else {
-            deleteAmount = parseInt(args[0]);
+            deleteAmount = parseInt(amount);
         }
 
         message.channel.bulkDelete(deleteAmount, true)
