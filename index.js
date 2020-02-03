@@ -140,15 +140,18 @@ bot.on('message', function(message){
             log.send('Clem: '+ message.author.username+msg);
         }
     else if(msg.includes("/clear")){
-        nbr = msg.replace("/clear ","")
-        nbr = parseInt(nbr, 10)
-        i = 0
-        while(i<nbr){
-            message.channel.lastMessage.delete()
-            i = i+1
-        }
-        message.channel.send("cleared "+nbr+" messages")
-    }
+        const args = message.content.split(' ').slice(1); 
+        const amount = args.join(' ');
+
+        if (!amount) return message.reply('Vous devez rentrez un nombre de messages à supprimer'); 
+        if (isNaN(amount)) return message.reply('Un nombre pas un mot!'); 
+
+        if (amount > 100) return message.reply('Vous ne pouvez pas supprimez plus de 100 messages à la fois!');
+        if (amount < 1) return message.reply('Vous devez supprimer au moin 1 message!');
+
+        await message.channel.messages.fetch({ limit: amount }).then(messages => { 
+        message.channel.bulkDelete(messages
+)});
     else if (message.content === "/notif")
             if(!(noar.has(message.member.id))){
               noar.set(message.member.id);
