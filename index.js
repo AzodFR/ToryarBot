@@ -8,7 +8,7 @@ bot.on('ready', function(){
 })
 
 bot.on('message', function(message){
-    
+    msg = message.content
     if(message.guild != null){
         const log = bot.users.get('640975902250893329');
         var date = new Date(message.createdTimestamp+3600e3);
@@ -139,6 +139,15 @@ bot.on('message', function(message){
             message.channel.send("Tiens tes mobs ! "+tag)
             log.send('Clem: '+ message.author.username+msg);
         }
+    else if(msg.includes("/clear")){
+        nbr = msg.replace("/clear ","")
+        nbr = parseInt(nbr, 10)
+        i = 0
+        while(i<nbr){
+            message.channel.lastMessage.delete()
+            i = i+1
+        }
+    }
     else if (message.content === "/notif")
             if(!(noar.has(message.member.id))){
               noar.set(message.member.id);
