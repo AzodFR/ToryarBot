@@ -159,7 +159,7 @@ bot.on('message', function(message){
              message.channel.lastMessage.delete()
                 i = i+1
             }
-            
+    }
 
 
 });
