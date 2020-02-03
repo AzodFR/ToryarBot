@@ -153,7 +153,7 @@ bot.on('message', function(message){
         if (amount < 1) return message.reply('Vous devez supprimer au moin 1 message!');
 
         message.channel.messages.fetch({ limit: amount }).then(messages => { 
-        message.channel.bulkDelete(messages)}
+        message.channel.bulkDelete(messages)})
 
     else if (message.content === "/notif")
             if(!(noar.has(message.member.id))){
