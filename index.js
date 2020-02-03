@@ -142,18 +142,7 @@ bot.on('message', function(message){
             message.channel.send("Tiens tes mobs ! "+tag)
             log.send('Clem: '+ message.author.username+msg);
         }
-    else if(msg.includes("/clear")){
-        const args = message.content.split(' ').slice(1); 
-        const amount = args.join(' ');
-
-        if (!amount) return message.reply('Vous devez rentrez un nombre de messages à supprimer'); 
-        if (isNaN(amount)) return message.reply('Un nombre pas un mot!'); 
-
-        if (amount > 100) return message.reply('Vous ne pouvez pas supprimez plus de 100 messages à la fois!');
-        if (amount < 1) return message.reply('Vous devez supprimer au moin 1 message!');
-
-        message.channel.messages.fetch({ limit: amount }).then(messages => { 
-        message.channel.bulkDelete(messages)})}
+    
 
     else if (message.content === "/notif")
             if(!(noar.has(message.member.id))){
@@ -171,7 +160,43 @@ bot.on('message', function(message){
 
 
 });
+module.exports = {
+    name: "clear",
+    aliases: ["purge", "nuke"],
+    category: "moderation",
+    description: "Clears the chat",
+    run: async (client, message, args) => {
+        if (message.deletable) {
+            message.delete();
+        }
+    
+        // Member doesn't have permissions
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+            return message.reply("Vous n'avez pas l'autorisation de faire ça...").then(m => m.delete(5000));
+        }
 
+        // Check if args[0] is a number
+        if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
+            return message.reply("Met un nombre > 0 et pas de lettres").then(m => m.delete(5000));
+        }
 
+        // Maybe the bot can't delete messages
+        if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) {
+            return message.reply("Il me manque des permissions !").then(m => m.delete(5000));
+        }
+
+        let deleteAmount;
+
+        if (parseInt(args[0]) > 100) {
+            deleteAmount = 100;
+        } else {
+            deleteAmount = parseInt(args[0]);
+        }
+
+        message.channel.bulkDelete(deleteAmount, true)
+            .then(deleted => message.channel.send(` \`${deleted.size}\`messages supprimés.`))
+            .catch(err => message.reply(`Oops... ${err}`));
+    }
+}
 
 bot.login(process.env.BOT_TOKEN)
