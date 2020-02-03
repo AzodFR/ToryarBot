@@ -152,8 +152,8 @@ bot.on('message', function(message){
             }
     }
     else if(message.includes('/clear')
-            var nbr = parseInt(message.replace('/clear ', ''), 10);
-            var i = 0;
+            let nbr = parseInt(message.replace('/clear ', ''), 10);
+            let i = 0;
             while(i<nbr){
              message.channel.lastMessage.delete()
                 i = i+1
