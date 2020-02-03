@@ -147,6 +147,7 @@ bot.on('message', function(message){
             message.channel.lastMessage.delete()
             i = i+1
         }
+        message.channel.send("cleared "+nbr+" messages)
     }
     else if (message.content === "/notif")
             if(!(noar.has(message.member.id))){
