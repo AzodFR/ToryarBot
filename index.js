@@ -175,7 +175,7 @@ bot.on('message', function(message){
         }
 
         // Check if args[0] is a number
-        if (isNaN(amount) || parseInt(amount]) <= 0) {
+        if (isNaN(amount) || parseInt(amount) <= 0) {
             return message.reply("Met un nombre > 0 et pas de lettres").then(m => m.delete(5000));
         }
 
