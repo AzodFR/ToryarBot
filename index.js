@@ -152,7 +152,7 @@ bot.on('message', function(message){
             }
     }
     else if(message.includes('/clear')
-            let nbr = message.replace('/clear ', '')
+            nbr = message.replace('/clear ', '')
             nbr = parseInt(nbr, 10);
             let i = 0
             while(i<nbr){
