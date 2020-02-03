@@ -2,6 +2,9 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 const noar = new Discord.Collection();
 'use strict';
+async function doSomethingAsync() {
+  var result = await doSomethingElse()
+}
 bot.on('ready', function(){
     bot.user.setStatus('Tenez BreakerLand !')
     console.log('Connected');
@@ -149,7 +152,7 @@ bot.on('message', function(message){
         if (amount > 100) return message.reply('Vous ne pouvez pas supprimez plus de 100 messages à la fois!');
         if (amount < 1) return message.reply('Vous devez supprimer au moin 1 message!');
 
-        await message.channel.messages.fetch({ limit: amount }).then(messages => { 
+        message.channel.messages.fetch({ limit: amount }).then(messages => { 
         message.channel.bulkDelete(messages
 )});
     else if (message.content === "/notif")
