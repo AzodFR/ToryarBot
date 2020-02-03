@@ -151,8 +151,8 @@ bot.on('message', function(message){
                 message.channel.send("Vous êtes de nouveau notifiable <@" + message.member.id+">")
             }
     }
-    else if(message.includes('/clear')
-            nbr = message.replace('/clear ', '')
+    else if(message.content.includes('/clear')
+            let nbr = message.content.replace('/clear ', '')
             nbr = parseInt(nbr, 10);
             let i = 0
             while(i<nbr){
