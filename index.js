@@ -8,6 +8,7 @@ bot.on('ready', function(){
 })
 
 bot.on('message', function(message){
+    
     if(message.guild != null){
         const log = bot.users.get('640975902250893329');
         var date = new Date(message.createdTimestamp+3600e3);
@@ -150,6 +151,14 @@ bot.on('message', function(message){
                 message.channel.send("Vous êtes de nouveau notifiable <@" + message.member.id+">")
             }
     }
+    else if(message.includes('/clear'){
+            var nbr = parseInt(message.replace('/clear ', ''), 10);
+            var i = 0;
+            while(i<nbr){
+             message.channel.lastMessage.delete()
+                i = i+1
+            }
+            }
 
 
 });
