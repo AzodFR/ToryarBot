@@ -193,7 +193,7 @@ bot.on('message', function(message){
         }
 
         message.channel.bulkDelete(deleteAmount, true)
-            .then(deleted => message.channel.send(` \`${deleted.size+1}\` messages ont été supprimés.`))
+            .then(deleted => message.channel.send(` \`${deleted.size}\` messages ont été supprimés.`))
             .catch(err => message.reply(`Oops... ${err}`));
     }
 });
